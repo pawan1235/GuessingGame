@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @author Pawan Intawongsa
  *
  */
+
 public class GameConsole {
 	Scanner sc = new Scanner(System.in);
 	private int guessNum;
@@ -18,6 +19,7 @@ public class GameConsole {
 	 * @param game
 	 *            is the GuessingGame's object call by this class
 	 */
+
 	public int play(GuessingGame game) {
 		String title = "Gussing Game";
 		String prompt = "Your guess?: ";
