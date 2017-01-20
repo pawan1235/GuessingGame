@@ -18,8 +18,10 @@ public class GuessingGame {
 	/**
 	 * Initialize a new game.
 	 * 
-	 * @param upperbound is the max value for the secret number (>1).
+	 * @param upperbound
+	 *            is the max value for the secret number (>1).
 	 */
+
 	public GuessingGame(int upperbound) { // This is a constructor
 		this.upperBound = upperbound;
 		secret = getRandomNumber(upperbound);
@@ -30,9 +32,11 @@ public class GuessingGame {
 	/**
 	 * Create a random number between 1 and limit.
 	 * 
-	 * @param limit is the upper limit for random number
+	 * @param limit
+	 *            is the upper limit for random number
 	 * @return a random number between 1 and limit (inclusive)
 	 */
+
 	private int getRandomNumber(int limit) {
 		Random rand = new Random();
 		return rand.nextInt(limit) + 1;
@@ -44,9 +48,10 @@ public class GuessingGame {
 	 * @return if user's answer match the random number return true if not
 	 *         return false.
 	 */
+
 	public boolean guess(int number) {
 		if (number == secret) {
-			setHint("Correct.The secret is " + secret + ".\nCorrect. You used "+count+" guesses.");
+			setHint("Correct.The secret is " + secret + ".\nCorrect. You used " + count + " guesses.");
 			count++;
 			return true;
 		} else if (number < secret) {
@@ -65,6 +70,7 @@ public class GuessingGame {
 	 * 
 	 * @return hint based on most recent guess
 	 */
+
 	public String getHint() {
 		return hint;
 	}
@@ -72,8 +78,10 @@ public class GuessingGame {
 	/**
 	 * set hint
 	 * 
-	 * @param hint to be set
+	 * @param hint
+	 *            to be set
 	 */
+
 	private void setHint(String hint) {
 		this.hint = hint;
 	}
@@ -83,13 +91,17 @@ public class GuessingGame {
 	 * 
 	 * @return secret number
 	 */
+
 	public int getSecret() {
 		return secret;
 	}
-/**
- * Get number of count
- * @return number of count
- */
+
+	/**
+	 * Get number of count
+	 * 
+	 * @return number of count
+	 */
+
 	public int getCount() {
 		return count;
 	}

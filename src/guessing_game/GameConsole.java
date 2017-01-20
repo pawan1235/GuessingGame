@@ -15,7 +15,8 @@ public class GameConsole {
 	/**
 	 * The play method plays a game using input from a user.
 	 * 
-	 * @param game is the GuessingGame's object call by this class
+	 * @param game
+	 *            is the GuessingGame's object call by this class
 	 */
 	public int play(GuessingGame game) {
 		String title = "Gussing Game";
@@ -27,7 +28,7 @@ public class GameConsole {
 			guessNum = sc.nextInt();
 			game.guess(guessNum);
 			System.out.println(game.getHint());
-			if(guessNum==game.getSecret()){
+			if (guessNum == game.getSecret()) {
 				return guessNum;
 			}
 		}
